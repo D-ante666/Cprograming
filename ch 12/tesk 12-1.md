@@ -51,4 +51,5 @@ printf("int형 변수 b의 주소: %u\n", &b);
 printf("double 형 변수 c의 주소: %u\n", &c);
 ```
 - double형 변수 c의 메모리 주소를 출력한다.
+# 실행화면
 <img width="467" height="142" alt="image" src="https://github.com/user-attachments/assets/13baf5a9-cc1f-4304-bee3-119804b70769" />
