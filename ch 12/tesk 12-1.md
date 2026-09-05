@@ -19,3 +19,19 @@
 
 - 결과값은 위에서부터 100, 101, 105
 - 결과값의 자료형은 위에서부터 char*, int*, double*
+# 실습과제 4
+#define _CRT_SECURE_NO_WARNINGS // 보안오류방지
+#pragma warning(disable:6031)  // 리턴값관련 경고 방지
+#include<stdio.h>
+
+int main(void) {
+    char a = 'A';
+    int b = 36;
+    double c = 3.141592;
+
+    printf("char형 변수 a의 주소: %u\n", &a);
+    printf("int형 변수 b의 주소: %u\n", &b);
+    printf("double 형 변수 c의 주소: %u\n", &c);
+
+    return 0;
+}
