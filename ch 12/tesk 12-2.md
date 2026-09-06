@@ -15,30 +15,6 @@
 
 마찬가지로 *&in은 10, *&db는 3.4가 된다.
 # 실습과제 2
-
-# 소스코드
-
-```c
-#include <stdio.h>
-
-int main(void)
-{
-    int a = -100;
-    char b = 'A';
-    double c = 3.14;
-
-    int *pa = &a;
-    char *pb = &b;
-    double *pc = &c;
-
-    printf("int형 변수 a의 값은 : %d\n", *pa);
-    printf("char형 변수 b의 값은 : %c\n", *pb);
-    printf("double형 변수 c의 값은 : %lf\n", *pc);
-
-    return 0;
-}
-```
-
 # 소스코드 설명
 
 ```c
