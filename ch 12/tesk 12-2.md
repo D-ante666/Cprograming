@@ -14,6 +14,93 @@
 따라서 *&ch는 *(&ch)로 해석되며, 먼저 &ch를 통해 ch의 주소를 구한 후 * 연산자를 통해 그 주소에 저장된 값인 A를 가져온다.
 
 마찬가지로 *&in은 10, *&db는 3.4가 된다.
+# 실습과제 2
+
+# 소스코드
+
+```c
+#include <stdio.h>
+
+int main(void)
+{
+    int a = -100;
+    char b = 'A';
+    double c = 3.14;
+
+    int *pa = &a;
+    char *pb = &b;
+    double *pc = &c;
+
+    printf("int형 변수 a의 값은 : %d\n", *pa);
+    printf("char형 변수 b의 값은 : %c\n", *pb);
+    printf("double형 변수 c의 값은 : %lf\n", *pc);
+
+    return 0;
+}
+```
+
+# 소스코드 설명
+
+```c
+int a = -100;
+```
+
+* int형 변수 a에 정수 -100을 저장한다.
+
+```c
+char b = 'A';
+```
+
+* char형 변수 b에 문자 'A'를 저장한다.
+
+```c
+double c = 3.14;
+```
+
+* double형 변수 c에 실수 3.14를 저장한다.
+
+```c
+int *pa = &a;
+```
+
+* int형 포인터 pa를 선언하고 변수 a의 주소를 저장한다.
+
+```c
+char *pb = &b;
+```
+
+* char형 포인터 pb를 선언하고 변수 b의 주소를 저장한다.
+
+```c
+double *pc = &c;
+```
+
+* double형 포인터 pc를 선언하고 변수 c의 주소를 저장한다.
+
+```c
+printf("int형 변수 a의 값은 : %d\n", *pa);
+```
+
+* 포인터 pa가 가리키는 변수 a의 값을 간접 참조하여 출력한다.
+
+```c
+printf("char형 변수 b의 값은 : %c\n", *pb);
+```
+
+* 포인터 pb가 가리키는 변수 b의 값을 간접 참조하여 출력한다.
+
+```c
+printf("double형 변수 c의 값은 : %lf\n", *pc);
+```
+
+* 포인터 pc가 가리키는 변수 c의 값을 간접 참조하여 출력한다.
+
+```c
+return 0;
+```
+
+* 프로그램을 정상적으로 종료한다.
+
 # 실습과제 3
 
 ## ①번 라인에서 강제형변환이 사용된 이유
