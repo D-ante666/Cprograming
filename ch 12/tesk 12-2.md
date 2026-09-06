@@ -71,11 +71,9 @@ printf("double형 변수 c의 값은 : %lf\n", *pc);
 
 * 포인터 pc가 가리키는 변수 c의 값을 간접 참조하여 출력한다.
 
-```c
-return 0;
-```
+# 실행화면
+<img width="422" height="136" alt="image" src="https://github.com/user-attachments/assets/4a1c8500-6134-4c1d-bff8-1b955d851670" />
 
-* 프로그램을 정상적으로 종료한다.
 
 # 실습과제 3
 
