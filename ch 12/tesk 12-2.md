@@ -145,8 +145,10 @@ printf("두 정수의 합 : %d\n", *psum);
 - 포인터 psum을 이용하여 sum의 값을 간접 참조하고 결과를 출력한다.
 # 실행화면
 <img width="427" height="105" alt="image" src="https://github.com/user-attachments/assets/ffc6c770-3717-46c9-81a4-dccf277db0ec" />
-# 실습과제 5
+
+# 실습과제5
 문제2번 변형: int형 변수 num1과 num2를 선언하고 각각 30과 50으로 초기화하시오. 포인터 변수 ptr1과 ptr2를 선언하여 각각 num1과 num2를 가리키게 하시오. 포인터를 이용하여 num1의 값을 20 증가시키고 num2의 값을 10 감소시키시오. 이후 두 포인터가 가리키는 대상을 서로 바꾸시오. 즉, ptr1이 num2를 가리키고 ptr2가 num1을 가리키도록 하시오. 마지막으로 ptr1이 가리키는 값을 출력하시오.
+
 # 소스코드 설명
 ```c
 int main(void)
