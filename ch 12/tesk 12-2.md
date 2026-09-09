@@ -143,3 +143,5 @@ int *psum = &sum;
 printf("두 정수의 합 : %d\n", *psum);
 ```
 - 포인터 psum을 이용하여 sum의 값을 간접 참조하고 결과를 출력한다.
+# 실행화면
+<img width="427" height="105" alt="image" src="https://github.com/user-attachments/assets/ffc6c770-3717-46c9-81a4-dccf277db0ec" />
