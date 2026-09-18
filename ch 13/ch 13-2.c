@@ -78,3 +78,25 @@ int main(void)
 
     return 0;
 }
+// ***********************************************
+// 제   목  :  실습과제5 사전에서 가장 앞에 나오는 문자열
+// 날   짜  :  2026년 9월 11일
+// 작성자   :  2600093
+// ***********************************************
+#include <stdio.h>
+
+int main(void)
+{
+    char* fruits[] = {"apple", "blueberry", "orange", "melon"};
+    int i, min = 0;
+
+    for (i = 1; i < 4; i++)
+    {
+        if (fruits[i][0] < fruits[min][0])
+            min = i;
+    }
+
+    printf("사전에서 가장 앞에 나오는 문자열: %s\n", fruits[min]);
+
+    return 0;
+}
