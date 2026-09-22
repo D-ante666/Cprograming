@@ -3,6 +3,8 @@
 // 날   짜  :  2026년 9월 23일
 // 작성자   :  2600093
 // **********************************************
+#define _CRT_SECURE_NO_WARNINGS
+#pragma warning(disable:6031)
 #include <stdio.h>
 void add2(int* value);
 int main(void)
@@ -24,7 +26,8 @@ void add2(int* value)
 // 날   짜  :  2026년 9월 23일
 // 작성자   :  2600093
 // ******************************************************************************************
-
+#define _CRT_SECURE_NO_WARNINGS
+#pragma warning(disable:6031)
 #include <stdio.h>
 
 int add2(int value);
@@ -54,7 +57,8 @@ int add2(int value)
 // 날   짜  :  2026년 9월 23일
 // 작성자   :  2600093
 // ******************************************************************************************
-
+#define _CRT_SECURE_NO_WARNINGS
+#pragma warning(disable:6031)
 #include <stdio.h>
 
 void swap(int* px, int* py);
@@ -96,7 +100,8 @@ void swap(int* px, int* py)
 // 날   짜  :  2026년 9월 23일
 // 작성자   :  2600093
 // ******************************************************************************************
-
+#define _CRT_SECURE_NO_WARNINGS
+#pragma warning(disable:6031)
 #include <stdio.h>
 
 int SquareByValue(int num);
