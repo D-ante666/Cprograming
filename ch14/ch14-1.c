@@ -90,3 +90,39 @@ void swap(int* px, int* py)
     *px = *py;
     *py = tmp;
 }
+```c
+// ******************************************************************************************
+// 제   목  :  실습과제5
+// 날   짜  :  2026년 9월 23일
+// 작성자   :  2600093
+// ******************************************************************************************
+
+#include <stdio.h>
+
+int SquareByValue(int num);
+void SquareByReference(int* num);
+
+int main(void)
+{
+    int num;
+
+    printf("정수를 입력하세요: ");
+    scanf("%d", &num);
+
+    printf("Call-by-value 결과: %d\n", SquareByValue(num));
+
+    SquareByReference(&num);
+    printf("Call-by-reference 결과: %d\n", num);
+
+    return 0;
+}
+
+int SquareByValue(int num)
+{
+    return num * 100;
+}
+
+void SquareByReference(int* num)
+{
+    *num = *num * 100;
+}
