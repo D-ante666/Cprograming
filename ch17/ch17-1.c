@@ -60,3 +60,41 @@ void prn_str(char** ptrarr, int count)
 	for (int i = 0; i < count; i++)
 		printf("%s\n", ptrarr[i]);
 }
+// ******************************************************************************************
+// 제   목  :  실습과제4
+// 날   짜  :  2026년 10월 7일
+// 작성자   :  2600093 서민수
+// ******************************************************************************************
+
+#include <stdio.h>
+
+void MaxAndMin(int* arr, int size, int** maxPtr, int** minPtr);
+
+int main(void)
+{
+	int* maxPtr;
+	int* minPtr;
+	int arr[5] = { 10, 30, 20, 50, 15 };
+
+	MaxAndMin(arr, 5, &maxPtr, &minPtr);
+
+	printf("최댓값: %d\n", *maxPtr);
+	printf("최솟값: %d\n", *minPtr);
+
+	return 0;
+}
+
+void MaxAndMin(int* arr, int size, int** maxPtr, int** minPtr)
+{
+	*maxPtr = &arr[0];
+	*minPtr = &arr[0];
+
+	for (int i = 1; i < size; i++)
+	{
+		if (**maxPtr < arr[i])
+			*maxPtr = &arr[i];
+
+		if (**minPtr > arr[i])
+			*minPtr = &arr[i];
+	}
+}
