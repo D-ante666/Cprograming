@@ -32,3 +32,31 @@ int Max(int** dptrarr, int size) {
 
 	return max;
 }
+// ******************************************************************************************
+// 제   목  :  실습과제3
+// 날   짜  :  2026년 10월 7일
+// 작성자   :  2600093 서민수
+// ******************************************************************************************
+
+#include <stdio.h>
+
+// 함수선언
+void prn_str(char** ptrarr, int count);
+
+int main(void)
+{
+	char* ptrarr[] = { "eagle", "tiger", "lion", "squirrel" };
+	int count;
+
+	count = sizeof(ptrarr) / sizeof(ptrarr[0]);
+	prn_str(ptrarr, count);
+
+	return 0;
+}
+
+// 함수정의
+void prn_str(char** ptrarr, int count)
+{
+	for (int i = 0; i < count; i++)
+		printf("%s\n", ptrarr[i]);
+}
