@@ -9,13 +9,32 @@
 */
 #define _CRT_SECURE_NO_WARNINGS
 #pragma warning(disable:6031)
+
+/*
+    ****************************************
+    제   목  :  실습과제2
+    학   번  :  2600093
+    작성자  :  서민수
+    날   짜  :  2026-10-28
+    ****************************************
+*/
+
 #include <stdio.h>
+
+void printString(const char* str)
+{
+    while (*str != '\0') {
+        putchar(*str);
+        str++;
+    }
+}
 
 int main(void)
 {
     char ch;
 
     while (1) {
+        printString("문자입력: ");
         ch = getchar();
 
         if (ch == 'q' || ch == 'Q') {
@@ -26,14 +45,15 @@ int main(void)
             continue;
         }
 
-        char* p = "입력된 문자는 ";
-        while (*p != '\0') {
-            putchar(*p);
-            p++;
-        }
-
+        printString("입력된 문자는 ");
         putchar(ch);
         putchar('\n');
+
+        while ((ch = getchar()) != '\n' && ch != EOF) {
+            if (ch == 'q' || ch == 'Q') {
+                return 0;
+            }
+        }
     }
 
     return 0;
