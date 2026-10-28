@@ -7,7 +7,8 @@
     날   짜  :  2026-10-28
     ****************************************
 */
-
+#define _CRT_SECURE_NO_WARNINGS
+#pragma warning(disable:6031)
 #include <stdio.h>
 
 int main(void)
@@ -48,6 +49,7 @@ int main(void)
 */
 
 #define _CRT_SECURE_NO_WARNINGS
+#pragma warning(disable:6031)
 #include <stdio.h>
 
 int main(void)
@@ -96,7 +98,8 @@ int main(void)
     날   짜  :  2026-10-28
     ****************************************
 */
-
+#define _CRT_SECURE_NO_WARNINGS
+#pragma warning(disable:6031)
 #include <stdio.h>
 
 int main(void)
@@ -127,7 +130,8 @@ int main(void)
     날   짜  :  2026-10-28
     ****************************************
 */
-
+#define _CRT_SECURE_NO_WARNINGS
+#pragma warning(disable:6031)
 #include <stdio.h>
 
 int main(void)
