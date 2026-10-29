@@ -43,42 +43,31 @@ int main(void)
 #include <stdio.h>
 #include <string.h>
 
-int my_strlen(const char *str);
-void RemoveBSN(char *str);
+int my_strlen(char* pstr);
+void RemoveBSN(char* pstr);
 
-int main(void)
-{
-    char str[100];
-
-    printf("문자열 입력: ");
-    fgets(str, sizeof(str), stdin);
-
-    printf("길이: %d, 내용: %s\n", my_strlen(str), str);
-
-    RemoveBSN(str);
-
-    printf("길이: %d, 내용: %s\n", my_strlen(str), str);
-
-    return 0;
+int main() {
+	char str[100];
+	printf("문자열입력:");
+	fgets(str, sizeof(str), stdin);
+	printf("길이: %d, 내용: %s \n", my_strlen(str), str);
+	RemoveBSN(str);
+	printf("길이: %d, 내용: %s \n", my_strlen(str), str);
+	return 0;
 }
 
-int my_strlen(const char *str)
-{
-    int count = 0;
-    while (str[count] != '\0')
-    {
-        count++;
-    }
-    return count;
+void RemoveBSN(char* pstr) {
+	int len = my_strlen(pstr);
+	pstr[len - 1] = '\0';
 }
 
-void RemoveBSN(char *str)
-{
-    int len = my_strlen(str);
-    if (len > 0 && str[len - 1] == '\n')
-    {
-        str[len - 1] = '\0';
-    }
+int my_strlen(char* pstr) {
+	int cnt = 0;
+	int i = 0;
+	while (pstr[i] != '\0') {
+		cnt++;
+		i++;
+	}return cnt;
 }
 /*
     ****************************************
