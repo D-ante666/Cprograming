@@ -42,6 +42,47 @@ int main(void)
 }
 /*
     ****************************************
+    제   목  :  실습과제3
+    학   번  :  2600093
+    작성자  :  서민수
+    날   짜  :  2026-11-03
+    ****************************************
+*/
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+#include <string.h>
+
+struct Car
+{
+    char model[50];
+    char number[20];
+    int distance;
+};
+
+int main(void)
+{
+    struct Car car;
+
+    printf("모델을 입력하시오: ");
+    fgets(car.model, sizeof(car.model), stdin);
+    car.model[strcspn(car.model, "\n")] = '\0';
+
+    printf("번호판을 입력하시오: ");
+    fgets(car.number, sizeof(car.number), stdin);
+    car.number[strcspn(car.number, "\n")] = '\0';
+
+    printf("주행거리를 입력하시오: ");
+    scanf("%d", &car.distance);
+
+    printf("\n");
+    printf("1. 모델: %s\n", car.model);
+    printf("2. 번호판: %s\n", car.number);
+    printf("3. 주행거리: %d km\n", car.distance);
+
+    return 0;
+}
+/*
+    ****************************************
     제   목  :  실습과제4
     학   번  :  2600093
     작성자  :  서민수
