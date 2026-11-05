@@ -6,7 +6,7 @@
     날   짜  :  2026-11-05
     ****************************************
 */
-/*
+
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 struct student
@@ -37,7 +37,7 @@ int main() {
 
     printf("%s, %d", maxname, max);
 }
-*/
+
 /*
     ****************************************
     제   목  :  실습과제2
@@ -46,7 +46,7 @@ int main() {
     날   짜  :  2026-11-05
     ****************************************
 */
-/*
+
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 struct student
@@ -77,7 +77,7 @@ int main() {
 
     printf("%s, %d", maxname, max);
 }
-*/
+
 
 /*
     ****************************************
@@ -87,7 +87,7 @@ int main() {
     날   짜  :  2026-11-05
     ****************************************
 */
-/*
+
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 #include <string.h>
@@ -131,7 +131,7 @@ int main(void)
 
     return 0;
 }
-*/
+
 
 /*
     ****************************************
@@ -141,7 +141,7 @@ int main(void)
     날   짜  :  2026-11-05
     ****************************************
 */
-/*
+
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 
@@ -188,4 +188,90 @@ int main(void)
 
     return 0;
 }
+
+/*
+    ****************************************
+    제   목  :  실습과제5
+    학   번  :  2600093
+    작성자  :  서민수
+    날   짜  :  2026-11-05
+    ****************************************
 */
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+
+struct employee
+{
+    char name[20];
+    char num[14];
+    int wage;
+};
+
+void sort(struct employee s[], int n);
+void print(struct employee s[], int n);
+
+int main(void)
+{
+    struct employee s[5];
+    int total = 0;
+    double avg;
+
+    for (int i = 0; i < 5; i++)
+    {
+        printf("이름 입력: ");
+        scanf("%19s", s[i].name);
+
+        printf("주민번호 입력: ");
+        scanf("%13s", s[i].num);
+
+        printf("급여 입력: ");
+        scanf("%d", &s[i].wage);
+
+        total += s[i].wage;
+    }
+
+    avg = (double)total / 5;
+
+    sort(s, 5);
+
+    printf("\n--- 급여 내림차순 정렬 ---\n");
+    print(s, 5);
+
+    printf("\n총 급여: %d원\n", total);
+    printf("평균 급여: %.2f원\n", avg);
+
+    printf("최고 급여 사원: %s, %d원\n",
+        s[0].name, s[0].wage);
+
+    printf("최저 급여 사원: %s, %d원\n",
+        s[4].name, s[4].wage);
+
+    return 0;
+}
+
+void sort(struct employee s[], int n)
+{
+    struct employee temp;
+
+    for (int i = 0; i < n - 1; i++)
+    {
+        for (int j = 0; j < n - 1 - i; j++)
+        {
+            if (s[j].wage < s[j + 1].wage)
+            {
+                temp = s[j];
+                s[j] = s[j + 1];
+                s[j + 1] = temp;
+            }
+        }
+    }
+}
+
+void print(struct employee s[], int n)
+{
+    for (int i = 0; i < n; i++)
+    {
+        printf("이름: %s, 주민번호: %s, 급여: %d원\n",
+            s[i].name, s[i].num, s[i].wage);
+    }
+}
